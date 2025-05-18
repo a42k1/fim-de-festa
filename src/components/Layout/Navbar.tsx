@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import Button from '@/components/UI/Button';
+import { Button } from '@/components/ui/button';
 import { useAuth } from '@/context/AuthContext';
 import AuthModal from '@/components/Auth/AuthModal';
-import { Menu, User, LogOut, Home, PlusCircle } from 'lucide-react';
+import { Menu, LogOut, Home, PlusCircle } from 'lucide-react';
 
 const Navbar = () => {
   const { user, isAuthenticated, logout } = useAuth();
@@ -163,7 +162,7 @@ const Navbar = () => {
                       setIsAuthModalOpen(true);
                       setIsMobileMenuOpen(false);
                     }}
-                    fullWidth
+                    className="w-full"
                   >
                     Entrar
                   </Button>

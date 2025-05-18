@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
-import Button from '@/components/UI/Button';
+import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { X } from 'lucide-react';
 
@@ -119,11 +119,15 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             
             <Button 
               type="submit" 
-              fullWidth 
-              isLoading={isLoading}
+              className="w-full" 
               disabled={isLoading || (!isLogin && !name) || !email || !password}
             >
-              {isLogin ? 'Entrar' : 'Registrar'}
+              {isLoading ? (
+                <>
+                  <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                  {isLogin ? 'Entrando...' : 'Registrando...'}
+                </>
+              ) : isLogin ? 'Entrar' : 'Registrar'}
             </Button>
           </form>
           

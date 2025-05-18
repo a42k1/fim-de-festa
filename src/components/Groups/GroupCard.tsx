@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/UI/Card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 import { Calendar, MapPin, Users } from 'lucide-react';
 import { Group } from '@/context/GroupContext';
-import Button from '@/components/UI/Button';
+import { Button } from '@/components/ui/button';
 
 interface GroupCardProps {
   group: Group;
@@ -23,7 +23,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ group }) => {
   });
   
   return (
-    <Card glass animate className="h-full">
+    <Card className="h-full bg-fimdefesta-surface/80 backdrop-blur-sm border border-fimdefesta-border/50 shadow-lg animate-scale-in">
       <CardHeader>
         <CardTitle className="text-gradient text-xl">{group.name}</CardTitle>
         <div className="flex items-center gap-2 text-xs text-fimdefesta-muted">
@@ -61,7 +61,7 @@ const GroupCard: React.FC<GroupCardProps> = ({ group }) => {
       <CardFooter>
         <Button 
           variant="default" 
-          fullWidth
+          className="w-full"
           onClick={() => navigate(`/group/${group.id}`)}
         >
           Ver Detalhes

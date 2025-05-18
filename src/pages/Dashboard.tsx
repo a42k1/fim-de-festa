@@ -5,7 +5,7 @@ import { useAuth } from '@/context/AuthContext';
 import { useGroups } from '@/context/GroupContext';
 import Navbar from '@/components/Layout/Navbar';
 import GroupCard from '@/components/Groups/GroupCard';
-import Button from '@/components/UI/Button';
+import { Button } from '@/components/ui/button';
 import { Plus } from 'lucide-react';
 
 const Dashboard = () => {

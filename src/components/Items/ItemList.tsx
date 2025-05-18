@@ -2,7 +2,7 @@
 import React from 'react';
 import { Item, Participant, useGroups } from '@/context/GroupContext';
 import { Plus, Trash2, Users } from 'lucide-react';
-import Button from '@/components/UI/Button';
+import { Button } from '@/components/ui/button';
 
 interface ItemListProps {
   items: Item[];
