@@ -173,7 +173,7 @@ const GroupDetail = () => {
                   </div>
                   
                   <div className="pt-6">
-                    <Button fullWidth>
+                    <Button className="w-full">
                       Finalizar Pagamentos
                     </Button>
                   </div>
