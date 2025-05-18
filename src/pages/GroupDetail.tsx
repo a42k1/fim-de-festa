@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { useGroups } from '@/context/GroupContext';
 import Navbar from '@/components/Layout/Navbar';
-import Button from '@/components/UI/Button';
+import { Button } from '@/components/ui/button';
 import ItemList from '@/components/Items/ItemList';
 import AddItemForm from '@/components/Items/AddItemForm';
 import { useToast } from '@/hooks/use-toast';
